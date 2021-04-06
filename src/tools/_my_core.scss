@@ -1,0 +1,119 @@
+/**
+ * Fix ugly styles in CF7
+ */
+
+.cf-repsonse {
+    padding-left: 38px;
+    min-height: 28px;
+    line-height: 150%;
+}
+
+.wpcf7 {
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+span.wpcf7-not-valid-tip,
+div.wpcf7-validation-errors {
+    display: none !important;
+}
+
+input.wpcf7-not-valid,
+textarea.wpcf7-not-valid {
+    border: 2px solid red !important;
+}
+
+/**
+ * MY CORE
+ */
+input[type='submit'] {
+    border: 0;
+    outline: none;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.padding-5-0 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.padding-10-0 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.padding-20-0 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.padding-30-0 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.padding-40-0 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.padding-50-0 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.padding-60-0 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.padding-70-0 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.padding-80-0 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.no-top-padding {
+    padding-top: 0;
+}
+
+.no-bottom-padding {
+    padding-bottom: 0;
+}
+
+.no-left-padding {
+    padding-left: 0;
+}
+
+.no-right-padding {
+    padding-right: 0;
+}
