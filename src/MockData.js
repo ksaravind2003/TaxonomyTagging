@@ -13,6 +13,18 @@ export const AudiencesDescription = "Audiences type description"
 export const Needs = "Needs & subneeds"
 export const NeedsDescription = "Needs type description"
 
+export const Industries = "Industries"
+export const IndustriesDescription = "Industries type description"
+
+export const Products = "Products"
+export const ProductsDescription = "Products type description"
+
+export const Services = "Services"
+export const ServicesDescription = "Services type description"
+
+export const Topics = "Topics"
+export const TopicsDescription = "Topics type description"
+
 export const _contentType = [
     { Item: "Article" },
     { Item: "Client story" },
@@ -89,3 +101,41 @@ export const _Needs = [
     { Item: "Execute", Category: "Transform with technology" },
     { Item: "Visualize", Category: "Transform with technology" },
 ];
+
+export const _Industries = [
+    { Item: "Agriculture" },
+    { Item: "Alternatives" },
+    { Item: "Automotive" },
+    { Item: "Contact centers " },
+    { Item: "Data Centers " },
+    { Item: "Ecommerce" },
+    { Item: "Education" },
+    { Item: "Energy " },
+    { Item: "Financial services" },
+    { Item: "Food and beverage" },
+    { Item: "General interest" },
+    { Item: "Government " },
+    { Item: "Healthcare" },
+    { Item: "Hotels " },
+    { Item: "Industrial " },
+    { Item: "Land " },
+    { Item: "Legal" },
+    { Item: "Life Sciences" },
+    { Item: "Media " },
+    { Item: "Medical" },
+    { Item: "Multifamily " },
+    { Item: "Non-Profits " },
+    { Item: "Office " },
+    { Item: "Residential" },
+    { Item: "Retail" },
+    { Item: "Retirement living" },
+    { Item: "Self storage" },
+    { Item: "Shipping " },
+    { Item: "Sports facilities" },
+    { Item: "Student housing " },
+    { Item: "Technology " },
+    { Item: "Telecommunications" },
+    { Item: "Transportation" },
+];
+
+export const _Products = [];
