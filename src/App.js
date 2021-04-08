@@ -100,8 +100,9 @@ class App extends Component {
 
           <div className="form-group">
             <h1>
-              UTM Builder
+            Content tagging tool
             </h1>
+            <p>Centralize taxonomy information and updates so marketers and publishers always have access to the complete list of JLL.com tags available to them when submitting Workfront requests or building content.</p>
           </div>
 
           <div className="form-group required">
