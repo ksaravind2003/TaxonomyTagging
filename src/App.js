@@ -82,7 +82,10 @@ class App extends Component {
     event.target.className += " was-validated";
 
     if (this.state.SelectedContentType.length == 0
-      || this.state.SelectedLocations.length == 0) {
+      || this.state.SelectedLocations.length == 0
+      || this.state.SelectedAudiences.length == 0
+      || this.state.SelectedNeeds.length == 0
+      || this.state.SelectedServices.length == 0) {
       this.state.valid = false;
     }
 
