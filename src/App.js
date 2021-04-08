@@ -122,6 +122,7 @@ class App extends Component {
             <Multiselect id="contentType" className='form-control' aria-describedby="contentTypeHelp"
               singleSelect
               options={this.state.ContentType}
+              avoidHighlightFirstOption="true"
               displayValue="Item"
               showCheckbox={true}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedContentType: selectedList })}
@@ -137,6 +138,7 @@ class App extends Component {
             <label className="control-label" htmlFor="T&Itype">T&I type</label>
             <Multiselect id="T&Itype" className='form-control' aria-describedby="T&ItypeHelp"
               singleSelect
+              avoidHighlightFirstOption="true"
               options={this.state.TI}
               displayValue="Item"
               showCheckbox={true}
