@@ -38,7 +38,8 @@ class App extends Component {
       Topics: [],
       SelectedTopics: [],
 
-      linkListContent: ""
+      linkListContent: "",
+      valid: true
     }
   }
 
@@ -78,6 +79,12 @@ class App extends Component {
 
   GetSelectedItems = (event) => {
     event.preventDefault();
+    event.target.className += " was-validated";
+
+    if (this.state.SelectedContentType.length == 0
+      || this.state.SelectedLocations.length == 0) {
+      this.state.valid = false;
+    }
 
     let tempLinkListContent = "";
     tempLinkListContent = this.GenerateListContent(this.state.SelectedContentType, tempLinkListContent, ContentType);
@@ -96,7 +103,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <form>
+        <form className="needs-validation" noValidate>
 
           <div className="form-group">
             <h1>
@@ -118,6 +125,9 @@ class App extends Component {
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedContentType: selectedList })}
             />
             <small id="contentTypeHelp" className="form-text text-muted">{ContentTypedescription}</small>
+            <div className="invalid-feedback">
+              Please select a content type.
+              </div>
           </div>
 
           <div className="form-group">
@@ -170,7 +180,7 @@ class App extends Component {
             <small id="NeedstypeHelp" className="form-text text-muted">{NeedsDescription}</small>
           </div>
 
-          <div className="form-group required">
+          <div className="form-group">
             <label className="control-label" htmlFor="Industriestype">Industries type</label>
             <Multiselect id="Industriestype" className='form-control' aria-describedby="IndustriestypeHelp"
               options={this.state.Industries}
@@ -182,7 +192,7 @@ class App extends Component {
             <small id="IndustriestypeHelp" className="form-text text-muted">{IndustriesDescription}</small>
           </div>
 
-          <div className="form-group required">
+          <div className="form-group">
             <label className="control-label" htmlFor="Productstype">Products type</label>
             <Multiselect id="Productstype" className='form-control' aria-describedby="ProductstypeHelp"
               options={this.state.Products}
@@ -206,7 +216,7 @@ class App extends Component {
             <small id="ServicestypeHelp" className="form-text text-muted">{ServicesDescription}</small>
           </div>
 
-          <div className="form-group required">
+          <div className="form-group">
             <label className="control-label" htmlFor="Industriestype">Topics type</label>
             <Multiselect id="Topicstype" className='form-control' aria-describedby="TopicstypeHelp"
               options={this.state.Topics}
@@ -222,7 +232,9 @@ class App extends Component {
           <button className="btn btn-primary" onClick={e => this.GetSelectedItems(e)} type="submit">Generate link list</button>
           <button className="btn btn-primary" style={{ marginLeft: "20px" }} onClick={() => console.log("Reset")} type="submit">Reset</button>
 
-          <div class="form-group" style={{ paddingTop: "20px" }}>
+          {this.state.valid ? "" : <div className="alert alert-danger" role="alert" style={{marginTop: "15px"}}> Please fill all required fields </div>}
+
+          <div className="form-group" style={{ paddingTop: "20px" }}>
             <label htmlFor="linkListContent">Generated Link List</label>
             <textarea className="form-control" id="linkListContent" value={this.state.linkListContent} readOnly></textarea>
           </div>
