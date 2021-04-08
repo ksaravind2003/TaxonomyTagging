@@ -100,7 +100,7 @@ class App extends Component {
 
           <div className="form-group">
             <h1>
-            Content tagging tool
+              Content tagging tool
             </h1>
             <p>Centralize taxonomy information and updates so marketers and publishers always have access to the complete list of JLL.com tags available to them when submitting Workfront requests or building content.</p>
           </div>
@@ -218,8 +218,9 @@ class App extends Component {
             <small id="TopicstypeHelp" className="form-text text-muted">{TopicsDescription}</small>
           </div>
 
+
           <button className="btn btn-primary" onClick={e => this.GetSelectedItems(e)} type="submit">Generate link list</button>
-          <button className="btn btn-primary" onClick={ () => console.log("Reset")} type="submit">Reset</button>
+          <button className="btn btn-primary" style={{ marginLeft: "20px" }} onClick={() => console.log("Reset")} type="submit">Reset</button>
 
           <div class="form-group" style={{ paddingTop: "20px" }}>
             <label htmlFor="linkListContent">Generated Link List</label>
