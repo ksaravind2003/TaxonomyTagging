@@ -201,6 +201,7 @@ class App extends Component {
               options={this.state.Products}
               displayValue="Item"
               showCheckbox={true}
+              selectionLimit="5"
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedProducts: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedProducts: selectedList })}
             />
@@ -213,6 +214,7 @@ class App extends Component {
               options={this.state.Services}
               displayValue="Item"
               showCheckbox={true}
+              selectionLimit="5"
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedServices: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedServices: selectedList })}
             />
@@ -225,6 +227,7 @@ class App extends Component {
               options={this.state.Topics}
               displayValue="Item"
               showCheckbox={true}
+              selectionLimit="5"
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedTopics: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedTopics: selectedList })}
             />
