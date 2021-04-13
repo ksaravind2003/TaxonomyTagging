@@ -40,7 +40,7 @@ export const _contentType = [
     { Item: "Views" },
     { Item: "Webinar" },
     { Item: "White paper" },    
-    { Item: "Other" },
+    { Item: "Other" }
 ];
 
 export const _TI = [
