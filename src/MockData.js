@@ -33,15 +33,14 @@ export const _contentType = [
     { Item: "Location" },
     { Item: "Article" },
     { Item: "Commentary" },
-    { Item: "Other" },
-    { Item: "People" },
-    { Item: "" },
+    { Item: "People" }
     { Item: "News release" },
     { Item: "Research" },
     { Item: "Snapshots" },
     { Item: "Views" },
     { Item: "Webinar" },
-    { Item: "White paper" }
+    { Item: "White paper" },    
+    { Item: "Other" },
 ];
 
 export const _TI = [
