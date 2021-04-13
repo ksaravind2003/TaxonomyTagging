@@ -26,16 +26,22 @@ export const Topics = "Topics"
 export const TopicsDescription = "Topics type description"
 
 export const _contentType = [
+    { Item: "Case studies" },
+    { Item: "Client stories" },
+    { Item: "Event" },
+    { Item: "JLL In the news" },
+    { Item: "Location" },
     { Item: "Article" },
-    { Item: "Client story" },
     { Item: "Commentary" },
-    { Item: "News release" },
+    { Item: "Other" },
     { Item: "People" },
+    { Item: "" },
+    { Item: "News release" },
     { Item: "Research" },
-    { Item: "Snapshot" },
+    { Item: "Snapshots" },
     { Item: "Views" },
-    { Item: "JLL in the news" },
-    { Item: "Podcast" }
+    { Item: "Webinar" },
+    { Item: "White paper" }
 ];
 
 export const _TI = [
@@ -64,6 +70,21 @@ export const _Locations = [
     { Item: "Tijuana", Category: "Mexico" },
     { Item: "Panama City", Category: "Panama" },
     { Item: "Lima", Category: "Peru" },
+    { Item: "Puerto Rico", Category: "San Juan" },
+    { Item: "Alabama", Category: "Birmingham" },
+    { Item: "Alabama", Category: "Mobile" },
+    { Item: "Alabama", Category: "Montgomery" },
+    { Item: "Arizona", Category: "Phoenix" },
+    { Item: "California", Category: "Los Angeles" },
+    { Item: "California", Category: "Oakland" },
+    { Item: "California", Category: "Orange County" },
+    { Item: "California", Category: "Sacramento" },
+    { Item: "California", Category: "San Diego" },
+    { Item: "California", Category: "San Francisco" },
+    { Item: "California", Category: "Silicon Valley" },
+    { Item: "Colorado", Category: "Denver" },
+    { Item: "Connecticut", Category: "Hartford" },
+    { Item: "Connecticut", Category: "Westchester" },
 ];
 
 export const _Audiences = [
