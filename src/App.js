@@ -112,7 +112,15 @@ class App extends Component {
             <h1>
               Content tagging tool
             </h1>
-            <p>Centralize taxonomy information and updates so marketers and publishers always have access to the complete list of JLL.com tags available to them when submitting Workfront requests or building content.</p>
+            <br></br>
+            <p>Use this tool to compile a list of all the AEM tags you want to add to a new page on JLL.com.</p>
+            <ul>
+              <li>	Select the tags you want to add to your content in each of the categories below. Required categories are marked with an asterisk. To learn more about what different categories mean and how to use their tags, check out the tag definitions document.</li>
+              <li>	When you're finished, click "Generate link list" to get your list of tags, formatted:
+              Category name/Tag name, Tag name…
+For categories with multiple tags selected, each tag name will appear in a comma string after the category name. Categories are separated by a semicolon.</li>
+              <li>	Copy/paste your generated link list into your Workfront request or content template worksheet.</li>
+            </ul>
           </div>
 
           <br></br>
@@ -149,11 +157,12 @@ class App extends Component {
           </div>
 
           <div className="form-group required">
-            <label className="control-label" htmlFor="Locationstype">Locations type</label>
+            <label className="control-label" htmlFor="Locationstype">Locations</label>
             <Multiselect id="Locationstype" className='form-control' aria-describedby="LocationstypeHelp"
               options={this.state.Locations}
               displayValue="Item"
               groupBy="Category"
+              closeOnSelect={false}
               showCheckbox={true}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedLocations: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedLocations: selectedList })}
@@ -162,11 +171,12 @@ class App extends Component {
           </div>
 
           <div className="form-group required">
-            <label className="control-label" htmlFor="Audiencestype">Audiences type</label>
+            <label className="control-label" htmlFor="Audiencestype">Audiences</label>
             <Multiselect id="Audiencestype" className='form-control' aria-describedby="AudiencestypeHelp"
               options={this.state.Audiences}
               displayValue="Item"
               showCheckbox={true}
+              closeOnSelect={false}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedAudiences: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedAudiences: selectedList })}
             />
@@ -174,10 +184,12 @@ class App extends Component {
           </div>
 
           <div className="form-group required">
-            <label className="control-label" htmlFor="Needstype">Needs & Subneeds type</label>
+            <label className="control-label" htmlFor="Needstype">Needs & Subneeds</label>
             <Multiselect id="Needstype" className='form-control' aria-describedby="NeedstypeHelp"
               options={this.state.Needs}
               displayValue="Item"
+              groupBy="Category"
+              closeOnSelect={false}
               showCheckbox={true}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedNeeds: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedNeeds: selectedList })}
@@ -186,10 +198,11 @@ class App extends Component {
           </div>
 
           <div className="form-group">
-            <label className="control-label" htmlFor="Industriestype">Industries type</label>
+            <label className="control-label" htmlFor="Industriestype">Industries</label>
             <Multiselect id="Industriestype" className='form-control' aria-describedby="IndustriestypeHelp"
               options={this.state.Industries}
               displayValue="Item"
+              closeOnSelect={false}
               showCheckbox={true}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedIndustries: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedIndustries: selectedList })}
@@ -198,12 +211,13 @@ class App extends Component {
           </div>
 
           <div className="form-group">
-            <label className="control-label" htmlFor="Productstype">Products type</label>
+            <label className="control-label" htmlFor="Productstype">Products</label>
             <Multiselect id="Productstype" className='form-control' aria-describedby="ProductstypeHelp"
               options={this.state.Products}
               displayValue="Item"
               showCheckbox={true}
               selectionLimit="5"
+              closeOnSelect={false}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedProducts: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedProducts: selectedList })}
             />
@@ -211,12 +225,13 @@ class App extends Component {
           </div>
 
           <div className="form-group required">
-            <label className="control-label" htmlFor="Servicestype">Services type</label>
+            <label className="control-label" htmlFor="Servicestype">Services</label>
             <Multiselect id="Servicestype" className='form-control' aria-describedby="ServicestypeHelp"
               options={this.state.Services}
               displayValue="Item"
               showCheckbox={true}
               selectionLimit="5"
+              closeOnSelect={false}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedServices: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedServices: selectedList })}
             />
@@ -224,12 +239,13 @@ class App extends Component {
           </div>
 
           <div className="form-group">
-            <label className="control-label" htmlFor="Industriestype">Topics type</label>
+            <label className="control-label" htmlFor="Industriestype">Topics</label>
             <Multiselect id="Topicstype" className='form-control' aria-describedby="TopicstypeHelp"
               options={this.state.Topics}
               displayValue="Item"
               showCheckbox={true}
               selectionLimit="5"
+              closeOnSelect={false}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedTopics: selectedList })}
               onRemove={(selectedList, selectedItem) => this.setState({ SelectedTopics: selectedList })}
             />
@@ -240,7 +256,7 @@ class App extends Component {
           <button className="btn btn-primary" onClick={e => this.GetSelectedItems(e)} type="submit">Generate link list</button>
           <button className="btn btn-primary" style={{ marginLeft: "20px" }} onClick={() => console.log("Reset")} type="submit">Reset</button>
 
-          {this.state.valid ? "" : <div className="alert alert-danger" role="alert" style={{marginTop: "15px"}}> Please fill all required fields </div>}
+          {this.state.valid ? "" : <div className="alert alert-danger" role="alert" style={{ marginTop: "15px" }}> Please fill all required fields </div>}
 
           <div className="form-group" style={{ paddingTop: "20px" }}>
             <label htmlFor="linkListContent">Generated Link List</label>

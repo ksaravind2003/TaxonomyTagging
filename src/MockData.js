@@ -1,29 +1,29 @@
 export const ContentType = "Content type"
-export const ContentTypedescription = "Content type description"
+export const ContentTypedescription = ""
 
 export const TI = "T&I"
-export const TItypeDescription = "T&I type description"
+export const TItypeDescription = ""
 
 export const Locations = "Locations"
-export const LocationsDescription = "Locations type description"
+export const LocationsDescription = ""
 
 export const Audiences = "Audiences"
-export const AudiencesDescription = "Audiences type description"
+export const AudiencesDescription = ""
 
 export const Needs = "Needs & subneeds"
-export const NeedsDescription = "Needs type description"
+export const NeedsDescription = ""
 
 export const Industries = "Industries"
-export const IndustriesDescription = "Industries type description"
+export const IndustriesDescription = ""
 
 export const Products = "Products"
-export const ProductsDescription = "Products type description"
+export const ProductsDescription = ""
 
 export const Services = "Services"
-export const ServicesDescription = "Services type description"
+export const ServicesDescription = ""
 
 export const Topics = "Topics"
-export const TopicsDescription = "Topics type description"
+export const TopicsDescription = ""
 
 export const _contentType = [
     { Item: "Case studies" },
