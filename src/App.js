@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { Multiselect } from "multiselect-react-dropdown";
+import { Multiselect } from "./multiselect/multiselect.component";
 import './MockData'
 import { Audiences, AudiencesDescription, ContentType, ContentTypedescription, Industries, IndustriesDescription, Locations, LocationsDescription, Needs, NeedsDescription, Products, ProductsDescription, Services, ServicesDescription, TI, TItypeDescription, Topics, TopicsDescription, _Audiences, _contentType, _Industries, _Locations, _Needs, _Products, _Services, _TI, _Topics } from './MockData';
 
@@ -88,6 +88,10 @@ class App extends Component {
       || this.state.SelectedServices.length == 0) {
       this.state.valid = false;
     }
+    else
+    {
+      this.state.valid = true;
+    }
 
     let tempLinkListContent = "";
     tempLinkListContent = this.GenerateListContent(this.state.SelectedContentType, tempLinkListContent, ContentType);
@@ -161,7 +165,7 @@ For categories with multiple tags selected, each tag name will appear in a comma
             <Multiselect id="Locationstype" className='form-control' aria-describedby="LocationstypeHelp"
               options={this.state.Locations}
               displayValue="Item"
-              groupBy="Category"
+              level ="Category"
               closeOnSelect={false}
               showCheckbox={true}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedLocations: selectedList })}
@@ -188,7 +192,7 @@ For categories with multiple tags selected, each tag name will appear in a comma
             <Multiselect id="Needstype" className='form-control' aria-describedby="NeedstypeHelp"
               options={this.state.Needs}
               displayValue="Item"
-              groupBy="Category"
+              level ="Category"
               closeOnSelect={false}
               showCheckbox={true}
               onSelect={(selectedList, selectedItem) => this.setState({ SelectedNeeds: selectedList })}
